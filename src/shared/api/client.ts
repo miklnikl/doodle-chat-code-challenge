@@ -26,7 +26,13 @@ export const apiRequest = async <T>(
   });
 
   if (!response.ok) {
-    throw await ApiError.fromResponse(response);
+    const data = await response.json().catch(() => null);
+    const message =
+      data && typeof data.message === 'string'
+        ? data.message
+        : `Request failed with status ${response.status}`;
+
+    throw new ApiError(response.status, message);
   }
 
   if (response.status === 204) {
