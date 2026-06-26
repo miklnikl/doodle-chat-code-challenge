@@ -27,7 +27,13 @@ export const App = () => {
 
   return (
     <div className={styles.app}>
-      <main className={styles.messages} ref={scrollRef}>
+      <h1 className={styles.srOnly}>Doodle Chat</h1>
+      <main
+        className={styles.messages}
+        ref={scrollRef}
+        tabIndex={0}
+        aria-label="Chat messages"
+      >
         <div className={styles.container}>
           {isLoading && <MessageSkeleton />}
           {isError && <ErrorMessage>{error.message}</ErrorMessage>}

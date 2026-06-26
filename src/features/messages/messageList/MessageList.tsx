@@ -13,7 +13,7 @@ export const MessageList = ({ messages, currentUser }: MessageListProps) => {
   }
 
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} role="log" aria-label="Messages">
       {messages.map((message) => (
         <MessageItem
           key={message._id}

@@ -3,11 +3,15 @@
   min-width: 0;
   resize: none;
   overflow-y: hidden;
-  border: 2px solid var(--color-input-border);
+  border: 2px solid var(--color-footer-bg);
   color: var(--color-input-text);
   caret-color: var(--color-input-caret);
   border-radius: var(--border-radius);
   padding: 10px;
   outline: none;
   min-height: 48px;
+}
+
+.textarea:focus {
+  border: 2px solid var(--color-input-border);
 }

@@ -46,6 +46,7 @@ export const MessageComposer = ({
         value={text}
         onChange={(event) => setText(event.target.value)}
         placeholder="Message"
+        aria-label="Message"
         rows={1}
         disabled={isSending}
       />

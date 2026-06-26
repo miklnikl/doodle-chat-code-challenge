@@ -2,6 +2,10 @@
 
 A small chat app built with React, TypeScript and Vite. It has session-based auth and talks to a chat API to load and send messages.
 
+## Trade offs
+
+- **Accessibility:** keyboard and screen reader support are in place, but two design-driven issues remain unaddressed — author/date contrast and the input's focus indicator (subtle border instead of an outline) fall short of WCAG AA.
+
 ## Getting started
 
 ```bash
