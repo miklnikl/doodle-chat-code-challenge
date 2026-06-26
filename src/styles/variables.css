@@ -1,0 +1,22 @@
+:root {
+  --chat-max-width: 640px;
+  --chat-padding-inline: 24px;
+  --message-max-width-ratio: 65.625%;
+  --message-padding: 16px;
+  --message-gap: 16px;
+
+  --color-app-bg: #f7f7f7;
+  --color-message-bg: #ffffff;
+  --color-message-bg-own: #fcf6c5;
+  --color-message-border: #d4dade;
+  --color-message-text: #434b54;
+  --color-message-author: #b3bcc2;
+  --color-message-date: #b3bcc2;
+
+  --color-footer-bg: #3898d4;
+  --color-button-bg: #ff866d;
+  --color-button-text: #ffffff;
+  --color-input-border: #2e77a4;
+  --color-input-text: #b3bcc2;
+  --color-input-caret: #2e77a4;
+}
