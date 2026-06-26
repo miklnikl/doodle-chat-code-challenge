@@ -6,6 +6,8 @@ A small chat app built with React, TypeScript and Vite. It talks to a chat API t
 
 - **Auth:** there is no login flow — the API has no auth endpoint, it only expects a static Bearer token, so the token is kept in the project (an env var) and sent with every request.
 
+- **`.env` committed:** the `.env` file is intentionally not gitignored so the project is easy to check out and run as-is. In a real project it would of course be gitignored and the token kept out of the repo.
+
 - **Accessibility:** keyboard and screen reader support are in place, but two design-driven issues remain unaddressed — author/date contrast and the input's focus indicator (subtle border instead of an outline) fall short of WCAG AA.
 
 ## Getting started
