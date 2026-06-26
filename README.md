@@ -1,15 +1,17 @@
 # Doodle Chat
 
-A small chat app built with React, TypeScript and Vite. It has session-based auth and talks to a chat API to load and send messages.
+A small chat app built with React, TypeScript and Vite. It talks to a chat API to load and send messages.
 
 ## Trade offs
+
+- **Auth:** there is no login flow — the API has no auth endpoint, it only expects a static Bearer token, so the token is kept in the project (an env var) and sent with every request.
 
 - **Accessibility:** keyboard and screen reader support are in place, but two design-driven issues remain unaddressed — author/date contrast and the input's focus indicator (subtle border instead of an outline) fall short of WCAG AA.
 
 ## Getting started
 
 ```bash
-yarn install
+yarn
 yarn dev
 ```
 
@@ -21,17 +23,20 @@ The app runs at http://localhost:5173.
 - `yarn build` — type-check and build for production
 - `yarn preview` — preview the production build
 - `yarn lint` — run ESLint
+- `yarn test` — run the tests in watch mode
+- `yarn test:run` — run the tests once
+- `yarn coverage` — run the tests with a coverage report
 
 ## Project structure
 
 ```
 src/
-  app/         app shell and providers
+  app/         app shell, providers
   features/
-    session/   login / session handling
-    messages/  message list, composer, API and hooks
+    messages/  message list / item / composer / skeleton, API and hooks
   shared/
     api/        HTTP client and error handling
     ui/         reusable UI components
     lib/        small helpers
+  styles/      reset, global styles and design tokens
 ```

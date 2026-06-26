@@ -1,4 +1,4 @@
-import { formatTime } from '../../../shared/lib/date';
+import { formatDateTime } from '../../../shared/lib/date';
 import type { Message } from '../types';
 import styles from './MessageItem.module.css';
 
@@ -18,7 +18,7 @@ export const MessageItem = ({ message, isOwn }: MessageItemProps) => (
     {!isOwn && <span className={styles.author}>{message.author}</span>}
     <p className={styles.text}>{decodeHtml(message.message)}</p>
     <time className={styles.date} dateTime={message.createdAt}>
-      {formatTime(message.createdAt)}
+      {formatDateTime(message.createdAt)}
     </time>
   </li>
 );
