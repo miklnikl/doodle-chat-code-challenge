@@ -1,12 +1,12 @@
-import { useLayoutEffect, useRef } from 'react';
-import { useMessages, useSendMessage } from '../features/messages/hooks';
-import { MessageList } from '../features/messages/messageList/MessageList';
-import { MessageComposer } from '../features/messages/MessageComposer';
-import { Spinner } from '../shared/ui/Spinner';
-import { ErrorMessage } from '../shared/ui/ErrorMessage';
-import styles from './App.module.css';
+import { useLayoutEffect, useRef } from "react";
+import { useMessages, useSendMessage } from "../features/messages/hooks";
+import { MessageList } from "../features/messages/messageList/MessageList";
+import { MessageComposer } from "../features/messages/MessageComposer";
+import { MessageSkeleton } from "../features/messages/messageSkeleton/MessageSkeleton";
+import { ErrorMessage } from "../shared/ui/ErrorMessage";
+import styles from "./App.module.css";
 
-const CURRENT_USER = 'You';
+const CURRENT_USER = "You";
 
 export const App = () => {
   const { data: messages, isLoading, isError, error } = useMessages();
@@ -29,7 +29,7 @@ export const App = () => {
     <div className={styles.app}>
       <main className={styles.messages} ref={scrollRef}>
         <div className={styles.container}>
-          {isLoading && <Spinner />}
+          {isLoading && <MessageSkeleton />}
           {isError && <ErrorMessage>{error.message}</ErrorMessage>}
           {messages && (
             <MessageList messages={messages} currentUser={CURRENT_USER} />
