@@ -6,6 +6,11 @@
   border: none;
   border-radius: var(--border-radius);
   font-weight: bold;
-  cursor: pointer;
   max-height: 48px;
+  transition: background-color 0.15s;
+}
+
+.button:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--color-button-bg) 90%, black);
+  cursor: pointer;
 }

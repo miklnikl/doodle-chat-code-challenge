@@ -45,7 +45,7 @@ export const MessageComposer = ({
         ref={inputRef}
         value={text}
         onChange={(event) => setText(event.target.value)}
-        placeholder="Type a message"
+        placeholder="Message"
         rows={1}
         disabled={isSending}
       />
