@@ -1,5 +1,6 @@
-import { MessageItem } from './MessageItem';
-import type { Message } from './types';
+import { MessageItem } from '../messageItem/MessageItem';
+import type { Message } from '../types';
+import styles from './MessageList.module.css';
 
 interface MessageListProps {
   messages: Message[];
@@ -12,7 +13,7 @@ export const MessageList = ({ messages, currentUser }: MessageListProps) => {
   }
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {messages.map((message) => (
         <MessageItem
           key={message._id}

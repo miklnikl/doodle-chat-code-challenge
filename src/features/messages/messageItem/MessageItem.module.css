@@ -1,0 +1,35 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: var(--message-max-width-ratio);
+  padding: var(--message-padding);
+  border: 1px solid var(--color-message-border);
+  border-radius: var(--border-radius);
+}
+
+.other {
+  align-self: flex-start;
+  background-color: var(--color-message-bg);
+}
+
+.own {
+  align-self: flex-end;
+  background-color: var(--color-message-bg-own);
+}
+
+.author {
+  color: var(--color-message-author);
+}
+
+.text {
+  color: var(--color-message-text);
+}
+
+.date {
+  color: var(--color-message-date);
+}
+
+.own .date {
+  text-align: right;
+}
