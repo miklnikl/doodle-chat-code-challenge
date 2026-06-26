@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Button } from '../../shared/ui/Button';
 import { Textarea } from '../../shared/ui/Textarea';
+import styles from './MessageComposer.module.css';
 
 interface MessageComposerProps {
   onSend: (message: string) => void;
@@ -24,7 +25,7 @@ export const MessageComposer = ({ onSend, isSending }: MessageComposerProps) => 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <Textarea
         value={text}
         onChange={(event) => setText(event.target.value)}

@@ -4,6 +4,8 @@
   --message-max-width-ratio: 65.625%;
   --message-padding: 16px;
   --message-gap: 16px;
+  --footer-padding: 8px;
+  --composer-gap: 8px;
 
   --color-app-bg: #f7f7f7;
   --color-message-bg: #ffffff;
